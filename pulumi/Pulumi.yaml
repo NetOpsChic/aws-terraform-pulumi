@@ -1,0 +1,11 @@
+name: aws-ec2
+description: create ec2 instance using pulumi
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: python

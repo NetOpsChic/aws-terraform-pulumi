@@ -1,0 +1,16 @@
+- name: Configure EC2 instance
+  hosts: all
+  become: yes
+  tasks:
+    - name: Update and upgrade apt packages
+      apt:
+        update_cache: yes
+        upgrade: dist
+
+    - name: Install basic tools
+      apt:
+        name:
+          - curl
+          - vim
+          - git
+        state: present
